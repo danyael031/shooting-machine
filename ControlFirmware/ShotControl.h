@@ -1,11 +1,11 @@
-#ifndef SHOT_CONTROL
-#define SHOT_CONTROL
+#ifndef SHOOTING_CONTROL
+#define SHOOTING_CONTROL
 
 struct Error{
   int errorCode;
-}
+};
 
-class ShotControl {
+class ShootingControl{
   protected:
     int port;
   public:
