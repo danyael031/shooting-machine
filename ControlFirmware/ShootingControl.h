@@ -1,17 +1,19 @@
-#ifndef SHOOTING_CONTROL
-#define SHOOTING_CONTROL
+#pragma once
+#include "EncMotor.h"
+
 
 struct Error{
   int errorCode;
 };
 
 class ShootingControl{
-  protected:
-    int port;
+  private:
+    EncMotor *encMotor;
   public:
-    void ControlLoop();
-    Error Initialize();
+    ShootingControl();
+    static void handleTachometerInterrupt();
+    void inLoop();
+    void setup();
 };
 
 
-#endif
